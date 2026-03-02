@@ -84,12 +84,11 @@
 ---
 
 ## `> GITHUB METRICS`
-
 <div align="center">
 
 
 
-![Streak Stats](https://github-readme-streak-stats.herokuapp.com/?user=Siriron&theme=dark&hide_border=true&background=050505&stroke=00FF88&ring=00FF88&fire=00CC55&currStreakNum=00FF88&sideNums=888888&currStreakLabel=00FF88&sideLabels=555555&dates=555555)
+![Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=Siriron&bg_color=050505&color=00FF88&line=00FF88&point=00cc55&area=true&hide_border=true)
 
 
 
