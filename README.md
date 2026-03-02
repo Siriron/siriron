@@ -1,121 +1,138 @@
-```
- ____  ___ ____  ___ ____  ___  _   _ 
-/ ___|_ _|  _ \|_ _|  _ \/ _ \| \ | |
-\___ \| || |_) || || |_) | | | |  \| |
- ___) | ||  _ < | ||  _ <| |_| | |\  |
-|____/___|_| \_\___|_| \_\\___/|_| \_|
-```
-
-```
-  [*]  W E B 3   D E V E L O P E R  [*]
-  =====================================
-  > siriron.eth // @Sir_Ironheart
-  > Building on-chain. Living off-chain.
-  > Status: DEPLOYING...
-```
-
----
-
-```
- ██████╗ ███╗   ██╗ ██████╗██╗  ██╗ █████╗ ██╗███╗   ██╗
-██╔═══██╗████╗  ██║██╔════╝██║  ██║██╔══██╗██║████╗  ██║
-██║   ██║██╔██╗ ██║██║     ███████║███████║██║██╔██╗ ██║
-██║   ██║██║╚██╗██║██║     ██╔══██║██╔══██║██║██║╚██╗██║
-╚██████╔╝██║ ╚████║╚██████╗██║  ██║██║  ██║██║██║ ╚████║
- ╚═════╝ ╚═╝  ╚═══╝ ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝
-```
-
-> *"Smart contracts don't lie. Humans do."*
-
----
-
-### `> SYSTEM IDENTITY`
-
-```
-┌─────────────────────────────────────────────────┐
-│  ALIAS     ::  siriron                          │
-│  TWITTER   ::  @Sir_Ironheart                   │
-│  SECTOR    ::  Web3 / DeFi / Smart Contracts    │
-│  STACK     ::  Solidity · TypeScript · Rust     │
-│  NETWORK   ::  EVM · Solana · L2s               │
-│  STATUS    ::  [ ██████████████░░░░ ] BUILDING  │
-└─────────────────────────────────────────────────┘
-```
-
----
-
-### `> TECH STACK`
-
-```
-BLOCKCHAIN     ████████████████████  Solidity / EVM
-FRONTEND       ████████████████░░░░  React / Next.js / wagmi
-BACKEND        █████████████░░░░░░░  Node.js / TypeScript
-RUST / ANCHOR  █████████░░░░░░░░░░░  Solana Programs
-INFRA          ████████████░░░░░░░░  Hardhat / Foundry / IPFS
-```
-
----
-
-### `> AREAS OF OPERATION`
-
-```
-  [✓]  Smart Contract Development
-  [✓]  DeFi Protocol Architecture
-  [✓]  NFT & Token Standards (ERC-20 / ERC-721 / ERC-1155)
-  [✓]  On-chain Security & Auditing
-  [✓]  Cross-chain Bridges & L2 Deployments
-  [✓]  Web3 Frontend Integration
-  [ ]  Sleep  <-- not yet implemented
-```
-
----
-
-### `> GITHUB STATS`
-
 <div align="center">
 
-![siriron's GitHub Stats](https://github-readme-stats.vercel.app/api?username=siriron&show_icons=true&theme=dark&hide_border=true&bg_color=0d0d0d&title_color=00ff88&icon_color=00ff88&text_color=cccccc)
-
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=siriron&layout=compact&theme=dark&hide_border=true&bg_color=0d0d0d&title_color=00ff88&text_color=cccccc)
+<!-- ANIMATED HEADER SVG -->
+<img src="header.svg" alt="SIRIRON - Web3 Developer" width="100%"/>
 
 </div>
 
 ---
 
-### `> FIND ME`
+<div align="center">
+
+<!-- LIVE TYPING SVG -->
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Share+Tech+Mono&size=18&pause=800&color=00FF88&center=true&vCenter=true&repeat=true&width=600&lines=Smart+contracts+don't+lie.+Humans+do.;Deploying+to+mainnet...;Building+the+decentralized+future.;On-chain+since+day+one.;%3E+siriron.eth+%2F%2F+%40Sir_Ironheart)](https://git.io/typing-svg)
+
+</div>
+
+---
 
 ```
-  ┌──────────────────────────────────────────┐
-  │                                          │
-  │   𝕏  twitter.com/Sir_Ironheart          │
-  │   ⬡  github.com/siriron                 │
-  │                                          │
-  └──────────────────────────────────────────┘
+┌─────────────────────────────────────────────────────────────────────┐
+│                                                                     │
+│   ALIAS    ::  siriron                    CHAIN  ::  EVM + Solana  │
+│   TWITTER  ::  @Sir_Ironheart            STACK  ::  Sol · TS · Rust│
+│   SECTOR   ::  Web3 / DeFi / L2          NODE   ::  ONLINE [████]  │
+│                                                                     │
+└─────────────────────────────────────────────────────────────────────┘
 ```
 
 ---
 
-### `> CURRENT MISSION`
+## `> TECH ARSENAL`
+
+<div align="center">
+
+**[ BLOCKCHAIN ]**
+
+![Solidity](https://img.shields.io/badge/Solidity-%23363636.svg?style=for-the-badge&logo=solidity&logoColor=00FF88)
+![Ethereum](https://img.shields.io/badge/Ethereum-3C3C3D?style=for-the-badge&logo=Ethereum&logoColor=00FF88)
+![Web3.js](https://img.shields.io/badge/web3.js-F16822?style=for-the-badge&logo=web3.js&logoColor=white)
+![Rust](https://img.shields.io/badge/Rust-%23000000.svg?style=for-the-badge&logo=rust&logoColor=00FF88)
+![Hardhat](https://img.shields.io/badge/Hardhat-FFF100?style=for-the-badge&logo=hardhat&logoColor=black)
+
+**[ FRONTEND / INTEGRATION ]**
+
+![React](https://img.shields.io/badge/React-%2320232a.svg?style=for-the-badge&logo=react&logoColor=00FF88)
+![Next JS](https://img.shields.io/badge/Next.js-black?style=for-the-badge&logo=next.js&logoColor=00FF88)
+![TypeScript](https://img.shields.io/badge/TypeScript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
+![NodeJS](https://img.shields.io/badge/Node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
+
+**[ INFRA / TOOLS ]**
+
+![IPFS](https://img.shields.io/badge/IPFS-65C2CB?style=for-the-badge&logo=ipfs&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
+![Git](https://img.shields.io/badge/Git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
+![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
+
+</div>
+
+---
+
+## `> AREAS OF OPERATION`
 
 ```
-  >> Shipping smart contracts to mainnet
-  >> Exploring ZK proofs & rollup tech
-  >> Contributing to open-source DeFi
+  [✓]  Smart Contract Development  ·············  Solidity / EVM / ERC Standards
+  [✓]  DeFi Protocol Architecture  ·············  AMMs, Vaults, Yield, Lending
+  [✓]  NFT Infrastructure          ·············  ERC-721 / ERC-1155 / Metadata
+  [✓]  On-chain Security & Auditing ············  Reentrancy, MEV, Slippage
+  [✓]  Cross-chain & L2 Deployments ············  Arbitrum, OP, zkSync, Base
+  [✓]  Web3 Frontend Integration   ·············  wagmi / viem / ethers.js
+  [✓]  Solana Programs             ·············  Anchor Framework / PDAs
+  [ ]  Sleep                       ·············  not yet implemented
+```
+
+---
+
+## `> CONTRIBUTION BLOCKCHAIN`
+
+<div align="center">
+
+<img src="blockchain-graph.svg" alt="Contribution Blockchain" width="100%"/>
+
+</div>
+
+---
+
+## `> GITHUB METRICS`
+
+<div align="center">
+
+<img height="160" src="https://github-readme-stats.vercel.app/api?username=siriron&show_icons=true&theme=dark&hide_border=true&bg_color=050505&title_color=00FF88&icon_color=00FF88&text_color=888888&ring_color=00FF88" />
+&nbsp;&nbsp;
+<img height="160" src="https://github-readme-stats.vercel.app/api/top-langs/?username=siriron&layout=compact&theme=dark&hide_border=true&bg_color=050505&title_color=00FF88&text_color=888888" />
+
+</div>
+
+<div align="center">
+
+<img src="https://github-readme-streak-stats.herokuapp.com/?user=siriron&theme=dark&hide_border=true&background=050505&stroke=00FF88&ring=00FF88&fire=00CC55&currStreakNum=00FF88&sideNums=888888&currStreakLabel=00FF88&sideLabels=555555&dates=555555" />
+
+</div>
+
+---
+
+## `> CURRENT MISSION`
+
+```
+  >> Deploying next-gen DeFi contracts to mainnet
+  >> Researching ZK proofs & validity rollup architecture
+  >> Building open-source tooling for Web3 devs
   >> Connecting the dots between code and capital
+  >> Making blockchains feel like magic for end users
 ```
 
 ---
 
-```
-  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-  | SIRIRON v1.0 — On-chain. Unstoppable.   |
-  | Any chain. Any contract. Your rules.    |
-  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-                                      <\))><
-```
+## `> FIND ME`
+
+<div align="center">
+
+[![Twitter](https://img.shields.io/badge/@Sir__Ironheart-%23000000.svg?style=for-the-badge&logo=X&logoColor=00FF88)](https://twitter.com/Sir_Ironheart)
+[![GitHub](https://img.shields.io/badge/github.com/siriron-%23121011.svg?style=for-the-badge&logo=github&logoColor=00FF88)](https://github.com/Siriron)
+
+</div>
 
 ---
 
 <div align="center">
-  <img src="https://komarev.com/ghpvc/?username=siriron&color=00ff88&style=flat-square&label=VISITORS" />
+
+```
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  |  SIRIRON v1.0  ·  On-chain. Unstoppable. Permissionless.      |
+  |  Any chain. Any contract. Your rules. No middlemen.           |
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```
+
+![Visitor Badge](https://komarev.com/ghpvc/?username=siriron&color=00FF88&style=flat-square&label=ON-CHAIN+VISITORS)
+
 </div>
