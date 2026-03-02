@@ -87,15 +87,27 @@
 
 <div align="center">
 
-<img height="160" src="https://github-readme-stats.vercel.app/api?username=siriron&show_icons=true&theme=dark&hide_border=true&bg_color=050505&title_color=00FF88&icon_color=00FF88&text_color=888888&ring_color=00FF88" />
+
+
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=Siriron&show_icons=true&theme=dark&hide_border=true&bg_color=050505&title_color=00FF88&icon_color=00FF88&text_color=888888&ring_color=00FF88)
+
+
 &nbsp;&nbsp;
-<img height="160" src="https://github-readme-stats.vercel.app/api/top-langs/?username=siriron&layout=compact&theme=dark&hide_border=true&bg_color=050505&title_color=00FF88&text_color=888888" />
+
+
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Siriron&layout=compact&theme=dark&hide_border=true&bg_color=050505&title_color=00FF88&text_color=888888)
+
+
 
 </div>
 
 <div align="center">
 
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=siriron&theme=dark&hide_border=true&background=050505&stroke=00FF88&ring=00FF88&fire=00CC55&currStreakNum=00FF88&sideNums=888888&currStreakLabel=00FF88&sideLabels=555555&dates=555555" />
+
+
+![Streak Stats](https://github-readme-streak-stats.herokuapp.com/?user=Siriron&theme=dark&hide_border=true&background=050505&stroke=00FF88&ring=00FF88&fire=00CC55&currStreakNum=00FF88&sideNums=888888&currStreakLabel=00FF88&sideLabels=555555&dates=555555)
+
+
 
 </div>
 
