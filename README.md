@@ -103,7 +103,7 @@
   >> Researching ZK proofs & validity rollup architecture
   >> Building open-source tooling for Web3 devs
   >> Connecting the dots between code and capital
-  >> Making blockchains feel like friend for end users
+  >> Making blockchains feel like real fun for users
 ```
 
 ---
