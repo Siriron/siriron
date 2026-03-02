@@ -1,1 +1,530 @@
+<svg width="900" height="180" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .bg { fill: #050505; }
+      .label {
+        font-family: 'Share Tech Mono', 'Courier New', monospace;
+        font-size: 10px;
+        fill: #1a4d2e;
+        letter-spacing: 0.2em;
+      }
+      .block {
+        fill: #0a1a0a;
+        stroke: #00ff88;
+        stroke-width: 0.8;
+      }
+      .block-filled {
+        fill: #003d1f;
+        stroke: #00ff88;
+        stroke-width: 0.8;
+      }
+      .block-hot {
+        fill: #00ff88;
+        stroke: #00ff88;
+        stroke-width: 1;
+        filter: url(#blockGlow);
+      }
+      .block-warm {
+        fill: #00cc55;
+        stroke: #00ff88;
+        stroke-width: 0.8;
+        opacity: 0.8;
+      }
+      .block-cool {
+        fill: #004d25;
+        stroke: #00aa44;
+        stroke-width: 0.5;
+        opacity: 0.6;
+      }
+      .connector {
+        stroke: #00ff88;
+        stroke-width: 0.5;
+        fill: none;
+        opacity: 0.2;
+      }
+      .tx-dot {
+        fill: #00ff88;
+        filter: url(#dotGlow);
+      }
+      .week-label {
+        font-family: 'Courier New', monospace;
+        font-size: 9px;
+        fill: #1a3d1a;
+        letter-spacing: 0.1em;
+      }
+      .day-label {
+        font-family: 'Courier New', monospace;
+        font-size: 8px;
+        fill: #153015;
+      }
 
+      @keyframes txMove1 {
+        0% { cx: 100; opacity: 0; }
+        10% { opacity: 1; }
+        90% { opacity: 1; }
+        100% { cx: 800; opacity: 0; }
+      }
+      @keyframes txMove2 {
+        0% { cx: 800; opacity: 0; }
+        10% { opacity: 1; }
+        90% { opacity: 1; }
+        100% { cx: 100; opacity: 0; }
+      }
+      @keyframes pulse {
+        0%, 100% { opacity: 0.4; }
+        50% { opacity: 1; }
+      }
+      @keyframes blockLight {
+        0%, 100% { fill: #00ff88; }
+        50% { fill: #00cc55; }
+      }
+
+      .tx1 { animation: txMove1 6s linear infinite; }
+      .tx2 { animation: txMove2 9s linear infinite; animation-delay: -3s; }
+      .tx3 { animation: txMove1 7s linear infinite; animation-delay: -4s; }
+
+      .blink-block { animation: blockLight 2s ease-in-out infinite; }
+      .pulse-node { animation: pulse 2s ease-in-out infinite; }
+    </style>
+
+    <filter id="blockGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="dotGlow" x="-200%" y="-200%" width="500%" height="500%">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+
+    <linearGradient id="txGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#00ff88" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#00ff88" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#00ff88" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="900" height="180" fill="#050505"/>
+
+  <!-- Top label -->
+  <text class="label" x="450" y="18" text-anchor="middle">▓  C O N T R I B U T I O N   B L O C K C H A I N  ▓</text>
+
+  <!-- Contribution grid - simulating GitHub's 52 weeks x 7 days grid -->
+  <!-- Week labels -->
+  <text class="week-label" x="100" y="38">JAN</text>
+  <text class="week-label" x="185" y="38">FEB</text>
+  <text class="week-label" x="268" y="38">MAR</text>
+  <text class="week-label" x="351" y="38">APR</text>
+  <text class="week-label" x="434" y="38">MAY</text>
+  <text class="week-label" x="517" y="38">JUN</text>
+  <text class="week-label" x="600" y="38">JUL</text>
+  <text class="week-label" x="683" y="38">AUG</text>
+  <text class="week-label" x="766" y="38">SEP</text>
+
+  <!-- Day labels -->
+  <text class="day-label" x="78" y="56">M</text>
+  <text class="day-label" x="78" y="68">W</text>
+  <text class="day-label" x="78" y="80">F</text>
+
+  <!-- Contribution blocks - 52 cols x 7 rows, 11px each with 2px gap -->
+  <!-- I'll generate a representative pattern that looks like a developer who works hard -->
+  <!-- Using groups of varying intensity blocks -->
+
+  <!-- Generate block pattern programmatically via SVG rects -->
+  <!-- Each block is 10x10 with 2px gap, starting at x=92, y=42 -->
+
+  <!-- Row 0 (Mon) -->
+  <rect class="block-cool" x="92" y="42" width="10" height="10" rx="1"/>
+  <rect class="block-filled" x="104" y="42" width="10" height="10" rx="1"/>
+  <rect class="block-cool" x="116" y="42" width="10" height="10" rx="1"/>
+  <rect class="block-hot" x="128" y="42" width="10" height="10" rx="1"/>
+  <rect class="block-warm" x="140" y="42" width="10" height="10" rx="1"/>
+  <rect class="block" x="152" y="42" width="10" height="10" rx="1"/>
+  <rect class="block-filled" x="164" y="42" width="10" height="10" rx="1"/>
+  <rect class="block-warm" x="176" y="42" width="10" height="10" rx="1"/>
+  <rect class="block-hot" x="188" y="42" width="10" height="10" rx="1"/>
+  <rect class="block-filled" x="200" y="42" width="10" height="10" rx="1"/>
+  <rect class="block-cool" x="212" y="42" width="10" height="10" rx="1"/>
+  <rect class="block-warm" x="224" y="42" width="10" height="10" rx="1"/>
+  <rect class="block-hot blink-block" x="236" y="42" width="10" height="10" rx="1"/>
+  <rect class="block-filled" x="248" y="42" width="10" height="10" rx="1"/>
+  <rect class="block-warm" x="260" y="42" width="10" height="10" rx="1"/>
+  <rect class="block-cool" x="272" y="42" width="10" height="10" rx="1"/>
+  <rect class="block-hot" x="284" y="42" width="10" height="10" rx="1"/>
+  <rect class="block-filled" x="296" y="42" width="10" height="10" rx="1"/>
+  <rect class="block-warm" x="308" y="42" width="10" height="10" rx="1"/>
+  <rect class="block-cool" x="320" y="42" width="10" height="10" rx="1"/>
+  <rect class="block-hot" x="332" y="42" width="10" height="10" rx="1"/>
+  <rect class="block-warm" x="344" y="42" width="10" height="10" rx="1"/>
+  <rect class="block-filled" x="356" y="42" width="10" height="10" rx="1"/>
+  <rect class="block-hot" x="368" y="42" width="10" height="10" rx="1"/>
+  <rect class="block-warm" x="380" y="42" width="10" height="10" rx="1"/>
+  <rect class="block" x="392" y="42" width="10" height="10" rx="1"/>
+  <rect class="block-hot" x="404" y="42" width="10" height="10" rx="1"/>
+  <rect class="block-filled" x="416" y="42" width="10" height="10" rx="1"/>
+  <rect class="block-warm" x="428" y="42" width="10" height="10" rx="1"/>
+  <rect class="block-hot" x="440" y="42" width="10" height="10" rx="1"/>
+  <rect class="block-cool" x="452" y="42" width="10" height="10" rx="1"/>
+  <rect class="block-filled" x="464" y="42" width="10" height="10" rx="1"/>
+  <rect class="block-hot" x="476" y="42" width="10" height="10" rx="1"/>
+  <rect class="block-warm" x="488" y="42" width="10" height="10" rx="1"/>
+  <rect class="block-filled" x="500" y="42" width="10" height="10" rx="1"/>
+  <rect class="block-cool" x="512" y="42" width="10" height="10" rx="1"/>
+  <rect class="block-hot" x="524" y="42" width="10" height="10" rx="1"/>
+  <rect class="block-warm" x="536" y="42" width="10" height="10" rx="1"/>
+  <rect class="block-hot blink-block" x="548" y="42" width="10" height="10" rx="1" style="animation-delay:1s"/>
+  <rect class="block-filled" x="560" y="42" width="10" height="10" rx="1"/>
+  <rect class="block-warm" x="572" y="42" width="10" height="10" rx="1"/>
+  <rect class="block-hot" x="584" y="42" width="10" height="10" rx="1"/>
+  <rect class="block-cool" x="596" y="42" width="10" height="10" rx="1"/>
+  <rect class="block-filled" x="608" y="42" width="10" height="10" rx="1"/>
+  <rect class="block-warm" x="620" y="42" width="10" height="10" rx="1"/>
+  <rect class="block-hot" x="632" y="42" width="10" height="10" rx="1"/>
+  <rect class="block-filled" x="644" y="42" width="10" height="10" rx="1"/>
+  <rect class="block-cool" x="656" y="42" width="10" height="10" rx="1"/>
+  <rect class="block-warm" x="668" y="42" width="10" height="10" rx="1"/>
+  <rect class="block-hot" x="680" y="42" width="10" height="10" rx="1"/>
+  <rect class="block-filled" x="692" y="42" width="10" height="10" rx="1"/>
+  <rect class="block-hot blink-block" x="704" y="42" width="10" height="10" rx="1" style="animation-delay:0.5s"/>
+
+  <!-- Row 1 (Tue) -->
+  <rect class="block-warm" x="92" y="54" width="10" height="10" rx="1"/>
+  <rect class="block-hot" x="104" y="54" width="10" height="10" rx="1"/>
+  <rect class="block-filled" x="116" y="54" width="10" height="10" rx="1"/>
+  <rect class="block-cool" x="128" y="54" width="10" height="10" rx="1"/>
+  <rect class="block-hot" x="140" y="54" width="10" height="10" rx="1"/>
+  <rect class="block-warm" x="152" y="54" width="10" height="10" rx="1"/>
+  <rect class="block-filled" x="164" y="54" width="10" height="10" rx="1"/>
+  <rect class="block-cool" x="176" y="54" width="10" height="10" rx="1"/>
+  <rect class="block-warm" x="188" y="54" width="10" height="10" rx="1"/>
+  <rect class="block-hot" x="200" y="54" width="10" height="10" rx="1"/>
+  <rect class="block-warm" x="212" y="54" width="10" height="10" rx="1"/>
+  <rect class="block-hot" x="224" y="54" width="10" height="10" rx="1"/>
+  <rect class="block-filled" x="236" y="54" width="10" height="10" rx="1"/>
+  <rect class="block-hot" x="248" y="54" width="10" height="10" rx="1"/>
+  <rect class="block-cool" x="260" y="54" width="10" height="10" rx="1"/>
+  <rect class="block-filled" x="272" y="54" width="10" height="10" rx="1"/>
+  <rect class="block-warm" x="284" y="54" width="10" height="10" rx="1"/>
+  <rect class="block-hot" x="296" y="54" width="10" height="10" rx="1"/>
+  <rect class="block-filled" x="308" y="54" width="10" height="10" rx="1"/>
+  <rect class="block-hot" x="320" y="54" width="10" height="10" rx="1"/>
+  <rect class="block-warm" x="332" y="54" width="10" height="10" rx="1"/>
+  <rect class="block-cool" x="344" y="54" width="10" height="10" rx="1"/>
+  <rect class="block-hot" x="356" y="54" width="10" height="10" rx="1"/>
+  <rect class="block-filled" x="368" y="54" width="10" height="10" rx="1"/>
+  <rect class="block-cool" x="380" y="54" width="10" height="10" rx="1"/>
+  <rect class="block-warm" x="392" y="54" width="10" height="10" rx="1"/>
+  <rect class="block-filled" x="404" y="54" width="10" height="10" rx="1"/>
+  <rect class="block-hot" x="416" y="54" width="10" height="10" rx="1"/>
+  <rect class="block-cool" x="428" y="54" width="10" height="10" rx="1"/>
+  <rect class="block-warm" x="440" y="54" width="10" height="10" rx="1"/>
+  <rect class="block-hot" x="452" y="54" width="10" height="10" rx="1"/>
+  <rect class="block-filled" x="464" y="54" width="10" height="10" rx="1"/>
+  <rect class="block-warm" x="476" y="54" width="10" height="10" rx="1"/>
+  <rect class="block-hot" x="488" y="54" width="10" height="10" rx="1"/>
+  <rect class="block-cool" x="500" y="54" width="10" height="10" rx="1"/>
+  <rect class="block-filled" x="512" y="54" width="10" height="10" rx="1"/>
+  <rect class="block-warm" x="524" y="54" width="10" height="10" rx="1"/>
+  <rect class="block-hot" x="536" y="54" width="10" height="10" rx="1"/>
+  <rect class="block-filled" x="548" y="54" width="10" height="10" rx="1"/>
+  <rect class="block-cool" x="560" y="54" width="10" height="10" rx="1"/>
+  <rect class="block-hot" x="572" y="54" width="10" height="10" rx="1"/>
+  <rect class="block-warm" x="584" y="54" width="10" height="10" rx="1"/>
+  <rect class="block-filled" x="596" y="54" width="10" height="10" rx="1"/>
+  <rect class="block-hot" x="608" y="54" width="10" height="10" rx="1"/>
+  <rect class="block-cool" x="620" y="54" width="10" height="10" rx="1"/>
+  <rect class="block-warm" x="632" y="54" width="10" height="10" rx="1"/>
+  <rect class="block-hot" x="644" y="54" width="10" height="10" rx="1"/>
+  <rect class="block-filled" x="656" y="54" width="10" height="10" rx="1"/>
+  <rect class="block-hot blink-block" x="668" y="54" width="10" height="10" rx="1" style="animation-delay:1.5s"/>
+  <rect class="block-warm" x="680" y="54" width="10" height="10" rx="1"/>
+  <rect class="block-filled" x="692" y="54" width="10" height="10" rx="1"/>
+  <rect class="block-hot" x="704" y="54" width="10" height="10" rx="1"/>
+
+  <!-- Row 2 (Wed) -->
+  <rect class="block-hot" x="92" y="66" width="10" height="10" rx="1"/>
+  <rect class="block-cool" x="104" y="66" width="10" height="10" rx="1"/>
+  <rect class="block-warm" x="116" y="66" width="10" height="10" rx="1"/>
+  <rect class="block-filled" x="128" y="66" width="10" height="10" rx="1"/>
+  <rect class="block-cool" x="140" y="66" width="10" height="10" rx="1"/>
+  <rect class="block-hot" x="152" y="66" width="10" height="10" rx="1"/>
+  <rect class="block-warm" x="164" y="66" width="10" height="10" rx="1"/>
+  <rect class="block-hot" x="176" y="66" width="10" height="10" rx="1"/>
+  <rect class="block-filled" x="188" y="66" width="10" height="10" rx="1"/>
+  <rect class="block-cool" x="200" y="66" width="10" height="10" rx="1"/>
+  <rect class="block-hot" x="212" y="66" width="10" height="10" rx="1"/>
+  <rect class="block-filled" x="224" y="66" width="10" height="10" rx="1"/>
+  <rect class="block-warm" x="236" y="66" width="10" height="10" rx="1"/>
+  <rect class="block-cool" x="248" y="66" width="10" height="10" rx="1"/>
+  <rect class="block-hot" x="260" y="66" width="10" height="10" rx="1"/>
+  <rect class="block-warm" x="272" y="66" width="10" height="10" rx="1"/>
+  <rect class="block-filled" x="284" y="66" width="10" height="10" rx="1"/>
+  <rect class="block-cool" x="296" y="66" width="10" height="10" rx="1"/>
+  <rect class="block-hot" x="308" y="66" width="10" height="10" rx="1"/>
+  <rect class="block-warm" x="320" y="66" width="10" height="10" rx="1"/>
+  <rect class="block-filled" x="332" y="66" width="10" height="10" rx="1"/>
+  <rect class="block-hot" x="344" y="66" width="10" height="10" rx="1"/>
+  <rect class="block-cool" x="356" y="66" width="10" height="10" rx="1"/>
+  <rect class="block-warm" x="368" y="66" width="10" height="10" rx="1"/>
+  <rect class="block-hot" x="380" y="66" width="10" height="10" rx="1"/>
+  <rect class="block-filled" x="392" y="66" width="10" height="10" rx="1"/>
+  <rect class="block-warm" x="404" y="66" width="10" height="10" rx="1"/>
+  <rect class="block-cool" x="416" y="66" width="10" height="10" rx="1"/>
+  <rect class="block-hot" x="428" y="66" width="10" height="10" rx="1"/>
+  <rect class="block-filled" x="440" y="66" width="10" height="10" rx="1"/>
+  <rect class="block-warm" x="452" y="66" width="10" height="10" rx="1"/>
+  <rect class="block-cool" x="464" y="66" width="10" height="10" rx="1"/>
+  <rect class="block-hot blink-block" x="476" y="66" width="10" height="10" rx="1" style="animation-delay:0.8s"/>
+  <rect class="block-filled" x="488" y="66" width="10" height="10" rx="1"/>
+  <rect class="block-warm" x="500" y="66" width="10" height="10" rx="1"/>
+  <rect class="block-hot" x="512" y="66" width="10" height="10" rx="1"/>
+  <rect class="block-cool" x="524" y="66" width="10" height="10" rx="1"/>
+  <rect class="block-filled" x="536" y="66" width="10" height="10" rx="1"/>
+  <rect class="block-warm" x="548" y="66" width="10" height="10" rx="1"/>
+  <rect class="block-hot" x="560" y="66" width="10" height="10" rx="1"/>
+  <rect class="block-filled" x="572" y="66" width="10" height="10" rx="1"/>
+  <rect class="block-cool" x="584" y="66" width="10" height="10" rx="1"/>
+  <rect class="block-warm" x="596" y="66" width="10" height="10" rx="1"/>
+  <rect class="block-hot" x="608" y="66" width="10" height="10" rx="1"/>
+  <rect class="block-filled" x="620" y="66" width="10" height="10" rx="1"/>
+  <rect class="block-warm" x="632" y="66" width="10" height="10" rx="1"/>
+  <rect class="block-hot" x="644" y="66" width="10" height="10" rx="1"/>
+  <rect class="block-cool" x="656" y="66" width="10" height="10" rx="1"/>
+  <rect class="block-filled" x="668" y="66" width="10" height="10" rx="1"/>
+  <rect class="block-warm" x="680" y="66" width="10" height="10" rx="1"/>
+  <rect class="block-hot" x="692" y="66" width="10" height="10" rx="1"/>
+  <rect class="block-filled" x="704" y="66" width="10" height="10" rx="1"/>
+
+  <!-- Row 3 (Thu) -->
+  <rect class="block-cool" x="92" y="78" width="10" height="10" rx="1"/>
+  <rect class="block-warm" x="104" y="78" width="10" height="10" rx="1"/>
+  <rect class="block-hot" x="116" y="78" width="10" height="10" rx="1"/>
+  <rect class="block-filled" x="128" y="78" width="10" height="10" rx="1"/>
+  <rect class="block-warm" x="140" y="78" width="10" height="10" rx="1"/>
+  <rect class="block-cool" x="152" y="78" width="10" height="10" rx="1"/>
+  <rect class="block-hot" x="164" y="78" width="10" height="10" rx="1"/>
+  <rect class="block-filled" x="176" y="78" width="10" height="10" rx="1"/>
+  <rect class="block-cool" x="188" y="78" width="10" height="10" rx="1"/>
+  <rect class="block-warm" x="200" y="78" width="10" height="10" rx="1"/>
+  <rect class="block-filled" x="212" y="78" width="10" height="10" rx="1"/>
+  <rect class="block-cool" x="224" y="78" width="10" height="10" rx="1"/>
+  <rect class="block-hot" x="236" y="78" width="10" height="10" rx="1"/>
+  <rect class="block-warm" x="248" y="78" width="10" height="10" rx="1"/>
+  <rect class="block-filled" x="260" y="78" width="10" height="10" rx="1"/>
+  <rect class="block-hot" x="272" y="78" width="10" height="10" rx="1"/>
+  <rect class="block-cool" x="284" y="78" width="10" height="10" rx="1"/>
+  <rect class="block-warm" x="296" y="78" width="10" height="10" rx="1"/>
+  <rect class="block-hot" x="308" y="78" width="10" height="10" rx="1"/>
+  <rect class="block-filled" x="320" y="78" width="10" height="10" rx="1"/>
+  <rect class="block-cool" x="332" y="78" width="10" height="10" rx="1"/>
+  <rect class="block-warm" x="344" y="78" width="10" height="10" rx="1"/>
+  <rect class="block-hot" x="356" y="78" width="10" height="10" rx="1"/>
+  <rect class="block-cool" x="368" y="78" width="10" height="10" rx="1"/>
+  <rect class="block-filled" x="380" y="78" width="10" height="10" rx="1"/>
+  <rect class="block-warm" x="392" y="78" width="10" height="10" rx="1"/>
+  <rect class="block-hot" x="404" y="78" width="10" height="10" rx="1"/>
+  <rect class="block-filled" x="416" y="78" width="10" height="10" rx="1"/>
+  <rect class="block-warm" x="428" y="78" width="10" height="10" rx="1"/>
+  <rect class="block-hot" x="440" y="78" width="10" height="10" rx="1"/>
+  <rect class="block-cool" x="452" y="78" width="10" height="10" rx="1"/>
+  <rect class="block-warm" x="464" y="78" width="10" height="10" rx="1"/>
+  <rect class="block-filled" x="476" y="78" width="10" height="10" rx="1"/>
+  <rect class="block-hot" x="488" y="78" width="10" height="10" rx="1"/>
+  <rect class="block-warm" x="500" y="78" width="10" height="10" rx="1"/>
+  <rect class="block-cool" x="512" y="78" width="10" height="10" rx="1"/>
+  <rect class="block-hot" x="524" y="78" width="10" height="10" rx="1"/>
+  <rect class="block-filled" x="536" y="78" width="10" height="10" rx="1"/>
+  <rect class="block-warm" x="548" y="78" width="10" height="10" rx="1"/>
+  <rect class="block-hot" x="560" y="78" width="10" height="10" rx="1"/>
+  <rect class="block-cool" x="572" y="78" width="10" height="10" rx="1"/>
+  <rect class="block-filled" x="584" y="78" width="10" height="10" rx="1"/>
+  <rect class="block-warm" x="596" y="78" width="10" height="10" rx="1"/>
+  <rect class="block-hot blink-block" x="608" y="78" width="10" height="10" rx="1" style="animation-delay:0.3s"/>
+  <rect class="block-cool" x="620" y="78" width="10" height="10" rx="1"/>
+  <rect class="block-filled" x="632" y="78" width="10" height="10" rx="1"/>
+  <rect class="block-warm" x="644" y="78" width="10" height="10" rx="1"/>
+  <rect class="block-hot" x="656" y="78" width="10" height="10" rx="1"/>
+  <rect class="block-filled" x="668" y="78" width="10" height="10" rx="1"/>
+  <rect class="block-cool" x="680" y="78" width="10" height="10" rx="1"/>
+  <rect class="block-hot" x="692" y="78" width="10" height="10" rx="1"/>
+  <rect class="block-warm" x="704" y="78" width="10" height="10" rx="1"/>
+
+  <!-- Row 4 (Fri) -->
+  <rect class="block-warm" x="92" y="90" width="10" height="10" rx="1"/>
+  <rect class="block-filled" x="104" y="90" width="10" height="10" rx="1"/>
+  <rect class="block-cool" x="116" y="90" width="10" height="10" rx="1"/>
+  <rect class="block-warm" x="128" y="90" width="10" height="10" rx="1"/>
+  <rect class="block-hot" x="140" y="90" width="10" height="10" rx="1"/>
+  <rect class="block-filled" x="152" y="90" width="10" height="10" rx="1"/>
+  <rect class="block-cool" x="164" y="90" width="10" height="10" rx="1"/>
+  <rect class="block-warm" x="176" y="90" width="10" height="10" rx="1"/>
+  <rect class="block-hot" x="188" y="90" width="10" height="10" rx="1"/>
+  <rect class="block-filled" x="200" y="90" width="10" height="10" rx="1"/>
+  <rect class="block-warm" x="212" y="90" width="10" height="10" rx="1"/>
+  <rect class="block-hot" x="224" y="90" width="10" height="10" rx="1"/>
+  <rect class="block-cool" x="236" y="90" width="10" height="10" rx="1"/>
+  <rect class="block-filled" x="248" y="90" width="10" height="10" rx="1"/>
+  <rect class="block-warm" x="260" y="90" width="10" height="10" rx="1"/>
+  <rect class="block-cool" x="272" y="90" width="10" height="10" rx="1"/>
+  <rect class="block-hot" x="284" y="90" width="10" height="10" rx="1"/>
+  <rect class="block-filled" x="296" y="90" width="10" height="10" rx="1"/>
+  <rect class="block-warm" x="308" y="90" width="10" height="10" rx="1"/>
+  <rect class="block-cool" x="320" y="90" width="10" height="10" rx="1"/>
+  <rect class="block-hot" x="332" y="90" width="10" height="10" rx="1"/>
+  <rect class="block-filled" x="344" y="90" width="10" height="10" rx="1"/>
+  <rect class="block-warm" x="356" y="90" width="10" height="10" rx="1"/>
+  <rect class="block-hot" x="368" y="90" width="10" height="10" rx="1"/>
+  <rect class="block-cool" x="380" y="90" width="10" height="10" rx="1"/>
+  <rect class="block-filled" x="392" y="90" width="10" height="10" rx="1"/>
+  <rect class="block-hot" x="404" y="90" width="10" height="10" rx="1"/>
+  <rect class="block-warm" x="416" y="90" width="10" height="10" rx="1"/>
+  <rect class="block-hot" x="428" y="90" width="10" height="10" rx="1"/>
+  <rect class="block-filled" x="440" y="90" width="10" height="10" rx="1"/>
+  <rect class="block-warm" x="452" y="90" width="10" height="10" rx="1"/>
+  <rect class="block-hot" x="464" y="90" width="10" height="10" rx="1"/>
+  <rect class="block-cool" x="476" y="90" width="10" height="10" rx="1"/>
+  <rect class="block-filled" x="488" y="90" width="10" height="10" rx="1"/>
+  <rect class="block-hot" x="500" y="90" width="10" height="10" rx="1"/>
+  <rect class="block-warm" x="512" y="90" width="10" height="10" rx="1"/>
+  <rect class="block-filled" x="524" y="90" width="10" height="10" rx="1"/>
+  <rect class="block-cool" x="536" y="90" width="10" height="10" rx="1"/>
+  <rect class="block-hot" x="548" y="90" width="10" height="10" rx="1"/>
+  <rect class="block-warm" x="560" y="90" width="10" height="10" rx="1"/>
+  <rect class="block-hot blink-block" x="572" y="90" width="10" height="10" rx="1" style="animation-delay:1.2s"/>
+  <rect class="block-filled" x="584" y="90" width="10" height="10" rx="1"/>
+  <rect class="block-cool" x="596" y="90" width="10" height="10" rx="1"/>
+  <rect class="block-warm" x="608" y="90" width="10" height="10" rx="1"/>
+  <rect class="block-hot" x="620" y="90" width="10" height="10" rx="1"/>
+  <rect class="block-filled" x="632" y="90" width="10" height="10" rx="1"/>
+  <rect class="block-warm" x="644" y="90" width="10" height="10" rx="1"/>
+  <rect class="block-hot" x="656" y="90" width="10" height="10" rx="1"/>
+  <rect class="block-cool" x="668" y="90" width="10" height="10" rx="1"/>
+  <rect class="block-filled" x="680" y="90" width="10" height="10" rx="1"/>
+  <rect class="block-hot" x="692" y="90" width="10" height="10" rx="1"/>
+  <rect class="block-warm" x="704" y="90" width="10" height="10" rx="1"/>
+
+  <!-- Row 5 (Sat) - less active -->
+  <rect class="block" x="92" y="102" width="10" height="10" rx="1"/>
+  <rect class="block-cool" x="104" y="102" width="10" height="10" rx="1"/>
+  <rect class="block" x="116" y="102" width="10" height="10" rx="1"/>
+  <rect class="block-cool" x="128" y="102" width="10" height="10" rx="1"/>
+  <rect class="block-warm" x="140" y="102" width="10" height="10" rx="1"/>
+  <rect class="block" x="152" y="102" width="10" height="10" rx="1"/>
+  <rect class="block-cool" x="164" y="102" width="10" height="10" rx="1"/>
+  <rect class="block-warm" x="176" y="102" width="10" height="10" rx="1"/>
+  <rect class="block" x="188" y="102" width="10" height="10" rx="1"/>
+  <rect class="block-cool" x="200" y="102" width="10" height="10" rx="1"/>
+  <rect class="block" x="212" y="102" width="10" height="10" rx="1"/>
+  <rect class="block-warm" x="224" y="102" width="10" height="10" rx="1"/>
+  <rect class="block-filled" x="236" y="102" width="10" height="10" rx="1"/>
+  <rect class="block" x="248" y="102" width="10" height="10" rx="1"/>
+  <rect class="block-cool" x="260" y="102" width="10" height="10" rx="1"/>
+  <rect class="block-warm" x="272" y="102" width="10" height="10" rx="1"/>
+  <rect class="block" x="284" y="102" width="10" height="10" rx="1"/>
+  <rect class="block-cool" x="296" y="102" width="10" height="10" rx="1"/>
+  <rect class="block-warm" x="308" y="102" width="10" height="10" rx="1"/>
+  <rect class="block" x="320" y="102" width="10" height="10" rx="1"/>
+  <rect class="block-cool" x="332" y="102" width="10" height="10" rx="1"/>
+  <rect class="block-warm" x="344" y="102" width="10" height="10" rx="1"/>
+  <rect class="block" x="356" y="102" width="10" height="10" rx="1"/>
+  <rect class="block-filled" x="368" y="102" width="10" height="10" rx="1"/>
+  <rect class="block-cool" x="380" y="102" width="10" height="10" rx="1"/>
+  <rect class="block" x="392" y="102" width="10" height="10" rx="1"/>
+  <rect class="block-warm" x="404" y="102" width="10" height="10" rx="1"/>
+  <rect class="block" x="416" y="102" width="10" height="10" rx="1"/>
+  <rect class="block-cool" x="428" y="102" width="10" height="10" rx="1"/>
+  <rect class="block-warm" x="440" y="102" width="10" height="10" rx="1"/>
+  <rect class="block" x="452" y="102" width="10" height="10" rx="1"/>
+  <rect class="block-filled" x="464" y="102" width="10" height="10" rx="1"/>
+  <rect class="block-cool" x="476" y="102" width="10" height="10" rx="1"/>
+  <rect class="block" x="488" y="102" width="10" height="10" rx="1"/>
+  <rect class="block-warm" x="500" y="102" width="10" height="10" rx="1"/>
+  <rect class="block" x="512" y="102" width="10" height="10" rx="1"/>
+  <rect class="block-cool" x="524" y="102" width="10" height="10" rx="1"/>
+  <rect class="block-filled" x="536" y="102" width="10" height="10" rx="1"/>
+  <rect class="block" x="548" y="102" width="10" height="10" rx="1"/>
+  <rect class="block-warm" x="560" y="102" width="10" height="10" rx="1"/>
+  <rect class="block" x="572" y="102" width="10" height="10" rx="1"/>
+  <rect class="block-cool" x="584" y="102" width="10" height="10" rx="1"/>
+  <rect class="block" x="596" y="102" width="10" height="10" rx="1"/>
+  <rect class="block-warm" x="608" y="102" width="10" height="10" rx="1"/>
+  <rect class="block-filled" x="620" y="102" width="10" height="10" rx="1"/>
+  <rect class="block" x="632" y="102" width="10" height="10" rx="1"/>
+  <rect class="block-cool" x="644" y="102" width="10" height="10" rx="1"/>
+  <rect class="block" x="656" y="102" width="10" height="10" rx="1"/>
+  <rect class="block-warm" x="668" y="102" width="10" height="10" rx="1"/>
+  <rect class="block" x="680" y="102" width="10" height="10" rx="1"/>
+  <rect class="block-cool" x="692" y="102" width="10" height="10" rx="1"/>
+  <rect class="block-warm" x="704" y="102" width="10" height="10" rx="1"/>
+
+  <!-- Row 6 (Sun) - less active -->
+  <rect class="block" x="92" y="114" width="10" height="10" rx="1"/>
+  <rect class="block" x="104" y="114" width="10" height="10" rx="1"/>
+  <rect class="block-cool" x="116" y="114" width="10" height="10" rx="1"/>
+  <rect class="block" x="128" y="114" width="10" height="10" rx="1"/>
+  <rect class="block-cool" x="140" y="114" width="10" height="10" rx="1"/>
+  <rect class="block" x="152" y="114" width="10" height="10" rx="1"/>
+  <rect class="block-warm" x="164" y="114" width="10" height="10" rx="1"/>
+  <rect class="block" x="176" y="114" width="10" height="10" rx="1"/>
+  <rect class="block-cool" x="188" y="114" width="10" height="10" rx="1"/>
+  <rect class="block" x="200" y="114" width="10" height="10" rx="1"/>
+  <rect class="block-cool" x="212" y="114" width="10" height="10" rx="1"/>
+  <rect class="block" x="224" y="114" width="10" height="10" rx="1"/>
+  <rect class="block-cool" x="236" y="114" width="10" height="10" rx="1"/>
+  <rect class="block" x="248" y="114" width="10" height="10" rx="1"/>
+  <rect class="block" x="260" y="114" width="10" height="10" rx="1"/>
+  <rect class="block-cool" x="272" y="114" width="10" height="10" rx="1"/>
+  <rect class="block-warm" x="284" y="114" width="10" height="10" rx="1"/>
+  <rect class="block" x="296" y="114" width="10" height="10" rx="1"/>
+  <rect class="block-cool" x="308" y="114" width="10" height="10" rx="1"/>
+  <rect class="block" x="320" y="114" width="10" height="10" rx="1"/>
+  <rect class="block" x="332" y="114" width="10" height="10" rx="1"/>
+  <rect class="block-cool" x="344" y="114" width="10" height="10" rx="1"/>
+  <rect class="block" x="356" y="114" width="10" height="10" rx="1"/>
+  <rect class="block-warm" x="368" y="114" width="10" height="10" rx="1"/>
+  <rect class="block" x="380" y="114" width="10" height="10" rx="1"/>
+  <rect class="block-cool" x="392" y="114" width="10" height="10" rx="1"/>
+  <rect class="block" x="404" y="114" width="10" height="10" rx="1"/>
+  <rect class="block" x="416" y="114" width="10" height="10" rx="1"/>
+  <rect class="block-cool" x="428" y="114" width="10" height="10" rx="1"/>
+  <rect class="block" x="440" y="114" width="10" height="10" rx="1"/>
+  <rect class="block-warm" x="452" y="114" width="10" height="10" rx="1"/>
+  <rect class="block" x="464" y="114" width="10" height="10" rx="1"/>
+  <rect class="block-cool" x="476" y="114" width="10" height="10" rx="1"/>
+  <rect class="block" x="488" y="114" width="10" height="10" rx="1"/>
+  <rect class="block" x="500" y="114" width="10" height="10" rx="1"/>
+  <rect class="block-warm" x="512" y="114" width="10" height="10" rx="1"/>
+  <rect class="block-cool" x="524" y="114" width="10" height="10" rx="1"/>
+  <rect class="block" x="536" y="114" width="10" height="10" rx="1"/>
+  <rect class="block-cool" x="548" y="114" width="10" height="10" rx="1"/>
+  <rect class="block" x="560" y="114" width="10" height="10" rx="1"/>
+  <rect class="block-warm" x="572" y="114" width="10" height="10" rx="1"/>
+  <rect class="block" x="584" y="114" width="10" height="10" rx="1"/>
+  <rect class="block-cool" x="596" y="114" width="10" height="10" rx="1"/>
+  <rect class="block" x="608" y="114" width="10" height="10" rx="1"/>
+  <rect class="block-cool" x="620" y="114" width="10" height="10" rx="1"/>
+  <rect class="block" x="632" y="114" width="10" height="10" rx="1"/>
+  <rect class="block" x="644" y="114" width="10" height="10" rx="1"/>
+  <rect class="block-warm" x="656" y="114" width="10" height="10" rx="1"/>
+  <rect class="block" x="668" y="114" width="10" height="10" rx="1"/>
+  <rect class="block-cool" x="680" y="114" width="10" height="10" rx="1"/>
+  <rect class="block" x="692" y="114" width="10" height="10" rx="1"/>
+  <rect class="block-cool" x="704" y="114" width="10" height="10" rx="1"/>
+
+  <!-- Animated TX lines traveling across the top of the grid -->
+  <line x1="92" y1="35" x2="714" y2="35" stroke="#00ff88" stroke-width="0.3" opacity="0.15"/>
+  <circle class="tx-dot tx1" cy="35" r="3"/>
+  <circle class="tx-dot tx2" cy="35" r="2" style="animation-delay:-2s"/>
+  <circle class="tx-dot tx3" cy="35" r="2.5" style="animation-delay:-5s"/>
+
+  <!-- Legend -->
+  <text class="label" x="92" y="148">LESS</text>
+  <rect fill="#0a1a0a" stroke="#00ff88" stroke-width="0.5" x="130" y="138" width="10" height="10" rx="1"/>
+  <rect fill="#003d1f" stroke="#00ff88" stroke-width="0.5" x="144" y="138" width="10" height="10" rx="1"/>
+  <rect fill="#004d25" stroke="#00aa44" stroke-width="0.5" x="158" y="138" width="10" height="10" rx="1"/>
+  <rect fill="#00cc55" stroke="#00ff88" stroke-width="0.8" x="172" y="138" width="10" height="10" rx="1"/>
+  <rect fill="#00ff88" stroke="#00ff88" x="186" y="138" width="10" height="10" rx="1"/>
+  <text class="label" x="200" y="148">MORE</text>
+
+  <!-- Bottom label -->
+  <text class="label" x="450" y="170" text-anchor="middle">▓  EACH BLOCK = 1 COMMIT · EACH GLOW = MAINNET DEPLOY  ▓</text>
+</svg>
