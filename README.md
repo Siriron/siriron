@@ -65,7 +65,7 @@
   [✓]  DeFi Protocol Architecture  ·············  AMMs, Vaults, Yield, Lending
   [✓]  NFT Infrastructure          ·············  ERC-721 / ERC-1155 / Metadata
   [✓]  On-chain Security & Auditing ············  Reentrancy, MEV, Slippage
-  [✓]  Cross-chain & L2 Deployments ············  Arbitrum, OP, zkSync, Base
+  [✓]  On-chain & L2 Deployments ············  Arbitrum, OP, zkSync, Base
   [✓]  Web3 Frontend Integration   ·············  wagmi / viem / ethers.js
   [✓]  Solana Programs             ·············  Anchor Framework / PDAs
   [ ]  Sleep                       ·············  not yet implemented
