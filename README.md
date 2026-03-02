@@ -103,7 +103,7 @@
   >> Researching ZK proofs & validity rollup architecture
   >> Building open-source tooling for Web3 devs
   >> Connecting the dots between code and capital
-  >> Making blockchains feel like magic for end users
+  >> Making blockchains feel like friend for end users
 ```
 
 ---
@@ -124,7 +124,7 @@
 ```
   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   |  SIRIRON v1.0  ·  On-chain. Unstoppable. Permissionless.      |
-  |  Any chain. Any contract. Your rules. No middlemen.           |
+  |  Any chain. Any contract. Your rules.           |
   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ```
 
